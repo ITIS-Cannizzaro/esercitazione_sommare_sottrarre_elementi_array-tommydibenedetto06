@@ -1,43 +1,56 @@
 import java.util.Scanner;
-
-// Chiamare la classe col proprio cognome
 public class MainClass
 {
 	static Scanner in = new Scanner(System.in);
-	
 	public static void main(String[] args)
 	{
-		while(true)
+		System.out.println("scegli l'esercizio:");
+		int scelta = Integer.parseInt(in.nextLine());
+		switch (scelta)
 		{
-			stampaMenu();
-			int scelta = Integer.parseInt(in.nextLine());
-			switch(scelta)
-			{
-				//aggiungere, togliere casi a seconda delle proprie scelte
-				case 1:
-					//Inserire metodo statico
-				break;
-				case 2:
-					//Inserire metodo statico
-				break;
-				case 3:
-					//Inserire metodo statico
-				break;
-				default:
-					System.out.println("Scelta errata, riprova!");
-
-			}
+		case 1:
+			esercizio1 ();
+			break;
+		case 2:
+			esercizio2 ();
+			break;
 		}
 	}
-	static void stampaMenu()
+	public static void esercizio1()
 	{
-		// Modificare il menù secondo le proprie scelte
-		System.out.println("1 - Es n. * - Titolo es. *");
-		System.out.println("2 - Es n. * - Titolo es. *");
-		System.out.println("3 - Es n. * - Titolo es. *");
-		System.out.println("4 - Es n. * - Titolo es. *");
-		System.out.println("5 - Es n. * - Titolo es. *");
+		System.out.println("inserire la quantità degli indici:");
+		int k = Integer.parseInt(in.nextLine());
+		int [] numeri = new int [k];
+
+		for (int i = 0; i < numeri.length; i++)
+		{			
+			System.out.println("inserire un numero:");
+			numeri[i] = Integer.parseInt(in.nextLine());
+		}
+		somma (numeri);
 	}
-	
-	// Aggiungere qui i metodi statici relativi agli esercizi scelti
+	public static void somma (int [] numeri)
+	{	
+		int addizione = 0;
+		int sottrazione = 0;
+			for (int j = 0; j < numeri.length; j++)
+			{
+				if ((j % 2 == 0 )|| (j==0))
+				{
+					addizione = addizione+ numeri[j];
+				}
+
+				else
+				{
+					sottrazione = -sottrazione - numeri[j];
+				}
+			}
+			System.out.println("il risultato delle somme tra gli indici pari è:" + addizione);
+			System.out.println("il risultato delle differenze tra gli indici dispari è:" + sottrazione);
+	}
+	public static void esercizio2()
+	{
+		
+	}
 }
+
