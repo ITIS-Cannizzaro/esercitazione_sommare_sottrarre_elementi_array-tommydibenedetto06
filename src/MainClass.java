@@ -63,7 +63,6 @@ public class MainClass
 	}
 	public static void inverso(int [] numeri)
 	{
-		System.out.println("ciao");
 		int [] scambio = new int [numeri.length];
 		for (int j = 0; j < numeri.length; j++)
 		{
