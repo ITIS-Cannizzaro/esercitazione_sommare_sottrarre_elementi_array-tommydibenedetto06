@@ -27,9 +27,9 @@ public class MainClass
 			System.out.println("inserire un numero:");
 			numeri[i] = Integer.parseInt(in.nextLine());
 		}
-		somma (numeri);
+		somma_sottrazione (numeri);
 	}
-	public static void somma (int [] numeri)
+	public static void somma_sottrazione (int [] numeri)
 	{	
 		int addizione = 0;
 		int sottrazione = 0;
@@ -50,7 +50,29 @@ public class MainClass
 	}
 	public static void esercizio2()
 	{
-		
+		System.out.println("inserire la quantità degli indici:");
+		int k = Integer.parseInt(in.nextLine());
+		int [] numeri = new int [k];
+
+		for (int i = 0; i < numeri.length; i++)
+		{			
+			System.out.println("inserire un numero:");
+			numeri[i] = Integer.parseInt(in.nextLine());
+		}
+		inverso(numeri);
+	}
+	public static void inverso(int [] numeri)
+	{
+		System.out.println("ciao");
+		int [] scambio = new int [numeri.length];
+		for (int j = 0; j < numeri.length; j++)
+		{
+			scambio [j] = numeri [numeri.length-j-1];
+		}
+		for (int n = 0; n < numeri.length; n++)
+		{
+			System.out.print(scambio[n]+ ";");
+		}
 	}
 }
 
